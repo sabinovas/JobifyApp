@@ -39,6 +39,15 @@ app.use(express.json());
 app.use(helmet());
 app.use(mongoSanitize());
 
+<<<<<<< HEAD
+=======
+
+
+app.get("/api/v1/test", (req, res) => {
+  res.json({ msg: "test route" });
+});
+
+>>>>>>> 5d7ba9ca7310b99db06a1eb0b4498dc8af56558f
 app.use("/api/v1/jobs", authenticateUser, jobRouter);
 app.use("/api/v1/users", authenticateUser, userRouter);
 app.use("/api/v1/auth", authRouter);
